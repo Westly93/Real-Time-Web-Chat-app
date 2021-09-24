@@ -1,0 +1,17 @@
+{% extends 'chat/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="form-container">
+		<form class="mb-5" method="post">
+			{% csrf_token %}
+			<fieldset>
+				<legend class="text-center border-bottom mb-2">Join Today</legend>
+				{{form| crispy}}
+			</fieldset>
+			<button class="form-btn btn btn-block btn-outline-success mt-2">Sign Up</button>
+			<div class ='mt-1'>
+				<span class="text-muted">Already have an account?</span> <a href="{% url 'login' %}">Sign In</a>
+			</div>
+		</form>
+	</div>
+{% endblock content %}

@@ -1,0 +1,8 @@
+{% extends 'chat/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="form-container">
+		<h3>You are now logged out click the link below to login again </h3>
+		<a class="form-link" href="{% url 'login' %}">Login again</a>
+	</div>
+{% endblock content %}

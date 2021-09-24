@@ -1,0 +1,20 @@
+{% extends 'chat/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="form-container">
+		<form class="mb-5" method="post">
+			{% csrf_token %}
+			<fieldset>
+				<legend class="text-center border-bottom mb-2">Sign In</legend>
+				{{form| crispy}}
+			</fieldset>
+			<div class="mt-1 password-reset-link">
+				<a href="">forgot password?</a>
+			</div>
+			<button class="form-btn btn btn-block btn-outline-success mt-2">Sign In</button>
+			<div class ='mt-1 registration-link'>
+				<span class="text-muted">Need an account?</span> <a href="">Create an account</a>
+			</div>
+		</form>
+	</div>
+{% endblock content %}
